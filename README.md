@@ -1,1 +1,4 @@
-Start package for [Bulma](http://bulma.io)
+This website use bulma
+
+To see all the modification, simply use: 
+`npm start`
