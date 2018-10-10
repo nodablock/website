@@ -11,10 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.7.1-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- <link rel="stylesheet" type="text/css" href="../css/landing.css"> -->
 </head>
 
 <body>
+
     <section class="hero is-info is-fullheight">
         <div class="hero-head">
             <nav class="navbar">
@@ -41,7 +43,6 @@
                                     <span>Home</span>
                                 </a>
                             </span> -->
-
                             <span class="navbar-item">
                                     <a class="button is-white is-outlined" href="pricing.html">
                                         <span class="icon">
@@ -89,46 +90,77 @@
             </div>
 
             <div class="hero-body">
+
                 <div class="container has-text-centered">
-                    <div class="column is-8 is-offset-2">
-                        <h1 class="title">
-                            Easy API access to any <strong> Blockchain </strong> networks <br/><br/>
-                        </h1>
-                        <h2 class="subtitle">
-                            Access to any blockchain networks with our <strong>secure</strong> API<br/>
-                            We support <strong>Ethereum</strong>, <strong>Bitcoin</strong>, <strong>EOS</strong>, <strong>Stellar</strong>, <strong>0x</strong>, and more...<br/><br/>
 
+                        <div class="pricing-table">
+                            <!-- <div class="pricing-plan">
+                              <div class="plan-header">Starter</div>
+                              <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>20</span>/month</div>
+                              <div class="plan-items">
+                                <div class="plan-item">20GB Storage</div>
+                                <div class="plan-item">100 Domains</div>
+                                <div class="plan-item">-</div>
+                                <div class="plan-item">-</div>
+                              </div>
+                              <div class="plan-footer">
+                                <button class="button is-fullwidth" disabled="disabled">Current plan</button>
+                              </div>
+                            </div> -->
+                          
+                            <div class="pricing-plan  is-active">
+                              <div class="plan-header">Starter</div>
+                              <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>60</span>/month</div>
+                              <div class="plan-items">
+                                <div class="plan-item">5,000 requests per day</div>
+                                <div class="plan-item">Ethereum API</div>
+                                <div class="plan-item">-</div>
+                                <div class="plan-item">-</div>
+                              </div>
+                              <div class="plan-footer">
 
-                            <i class="fas fa-bullseye"></i>
-                            Focus on your decentralized Apps<br/>
-
-                            <i class="fas fa-money-bill-wave"></i>
-                            Save money on your infrastructure<br/>
-
-                            <i class="far fa-clock"></i>
-                            Save time setting up and maintaining nodes<br/>
-
-
-                        </h2>
-                        <div class="box">
-                            <form action="https://nodablock.us19.list-manage.com/subscribe/post?u=7beaa58d0d6f825f3f7cb1710&amp;id=8f3c244367" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <div class="field is-grouped">
-                                <p class="control is-expanded">
-                                    <input class="input" autofocus type="text" placeholder="Enter your email, we will notify you when it's ready!" name="EMAIL" id="mce-EMAIL">
-                                </p>
-                                <p class="control">
-                                    <input type="submit" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="button is-info">
-                                </p>
+                                <button class="button is-fullwidth" id="start-plan-button-payment">Choose</button>
+                              </div>
                             </div>
-                            </form>
-                        </div>
-                    </div>
+                          
+                            <div class="pricing-plan is-warning">
+                              <div class="plan-header">Startup</div>
+                              <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>150</span>/month</div>
+                              <div class="plan-items">
+                                <div class="plan-item">10,000 requests per day</div>
+                                <div class="plan-item">Ethereum, Bitcoin APIs</div>
+                                <div class="plan-item">10 webhooks</div>
+                                <div class="plan-item">-</div>
+                              </div>
+                              <div class="plan-footer">
+                                <a href="mailto:hello@nodablock.com" class="button is-fullwidth">Contact us</a>
+                              </div>
+                            </div>
+                          
+                            <div class="pricing-plan is-danger">
+                              <div class="plan-header">Enterprise</div>
+                              <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>500</span>/month</div>
+                              <div class="plan-items">
+                                <div class="plan-item">50,000 requests per day</div>
+                                <div class="plan-item">Ethereum, Bitcoin, EOS, Stellar APIs</div>
+                                <div class="plan-item">50 webhooks</div>
+                                <div class="plan-item">-</div>
+                              </div>
+                              <div class="plan-footer">
+                                <button class="button is-fullwidth" disabled="disabled">Coming soon</button>
+                              </div>
+                            </div>
+                          </div>
+
+
                 </div>
             </div>
 
-    </section>
+    </section>    
+
     <!-- <script async type="text/javascript" src="../js/bulma.js"></script> -->
 </body>
+    <script async type="text/javascript" src="lib/main.js"></script>
 
 <script>
 
@@ -153,6 +185,39 @@
 
   gtag('config', 'UA-123793787-1');
 </script>
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<button id="customButton">Purchase</button>
+
+<script>
+var handler = StripeCheckout.configure({
+  key: 'pk_test_sMmDXDK7SEIpu26DVUnVjnfw',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+document.getElementById('start-plan-button-payment').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Nodablock',
+    description: 'Monthly Starter Plan',
+    currency: 'usd',
+    amount: 6000
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
+
 
 
 </html>
