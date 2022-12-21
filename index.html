@@ -14,524 +14,127 @@
 
   <body >
     <div class="page">
-      <!-- Sidebar -->
-      <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-md navbar-light d-print-none">
+        <div class="container-xl">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <h1 class="navbar-brand navbar-brand-autodark">
-            <a href="index.html">
-              NodaBlock
+          <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href="#">
+              Nodablock
             </a>
           </h1>
-          <div class="navbar-nav flex-row d-lg-none">
-            <div class="nav-item d-none d-lg-flex me-3">
-              <div class="btn-list">
-                <a href="https://github.com/tabler/tabler" class="btn" target="_blank" rel="noreferrer">
-                  <!-- Download SVG icon from http://tabler-icons.io/i/brand-github -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-                  Source code
-                </a>
-                <a href="https://github.com/sponsors/codecalm" class="btn" target="_blank" rel="noreferrer">
-                  <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
-                  Sponsor
-                </a>
-              </div>
-            </div>
-            <div class="d-none d-lg-flex">
-              <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip"
-		   data-bs-placement="bottom">
-                <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
-              </a>
-              <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip"
-		   data-bs-placement="bottom">
-                <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
-              </a>
-              <div class="nav-item dropdown d-none d-md-flex me-3">
-                <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
-                  <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
-                  <span class="badge bg-red"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card">
-                  <div class="card">
-                    <div class="card-header">
-                      <h3 class="card-title">Last updates</h3>
-                    </div>
-                    <div class="list-group list-group-flush list-group-hoverable">
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot status-dot-animated bg-red d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">Example 1</a>
-                            <div class="d-block text-muted text-truncate mt-n1">
-                              Change deprecated html tags to text decoration classes (#29604)
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">Example 2</a>
-                            <div class="d-block text-muted text-truncate mt-n1">
-                              justify-content:between ⇒ justify-content:space-between (#29734)
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions show">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-yellow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">Example 3</a>
-                            <div class="d-block text-muted text-truncate mt-n1">
-                              Update change-version.js (#29736)
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot status-dot-animated bg-green d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">Example 4</a>
-                            <div class="d-block text-muted text-truncate mt-n1">
-                              Regenerate package-lock.json (#29730)
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
-                <div class="d-none d-xl-block ps-2">
-                  <div>Paweł Kuna</div>
-                  <div class="mt-1 small text-muted">UI Designer</div>
-                </div>
-              </a>
-              <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <a href="#" class="dropdown-item">Status</a>
-                <a href="#" class="dropdown-item">Profile</a>
-                <a href="#" class="dropdown-item">Feedback</a>
-                <div class="dropdown-divider"></div>
-                <a href="./settings.html" class="dropdown-item">Settings</a>
-                <a href="./sign-in.html" class="dropdown-item">Logout</a>
-              </div>
-            </div>
-          </div>
-          <div class="collapse navbar-collapse" id="sidebar-menu">
-            <ul class="navbar-nav pt-lg-3">
-              <li class="nav-item">
-                <a class="nav-link" href="./" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                  </span>
-                  <span class="nav-link-title active">
-                    Project Overview
-                  </span>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" /><line x1="12" y1="12" x2="20" y2="7.5" /><line x1="12" y1="12" x2="12" y2="21" /><line x1="12" y1="12" x2="4" y2="7.5" /><line x1="16" y1="5.25" x2="8" y2="9.75" /></svg>
-                  </span>
-                  <span class="nav-link-title">
-                    NFT Project Activity
-                  </span>
-                </a>
-                <div class="dropdown-menu">
-                  <div class="dropdown-menu-columns">
-                    <div class="dropdown-menu-column">
-                      <a class="dropdown-item" href="./empty.html">
-                        Users Activity
-                      </a>
-                      <a class="dropdown-item" href="./">
-                        SmartContract Activity
-                        <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                      </a>
 
-                      <a class="dropdown-item" href="./">
-                        Ethereum Activity
-                      </a>
-                      
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./form-elements.html" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 11 12 14 20 6" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
-                  </span>
-                  <span class="nav-link-title">
-                    Smart Contract
-                  </span>
-                </a>
-              </li>
+          <div class="collapse navbar-collapse " id="navbar-menu">
+            <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
 
-            </ul>
-          </div>
-        </div>
-      </aside>
-      <div class="page-wrapper">
-        <!-- Page header -->
-        <div class="page-header d-print-none">
-          <div class="container-xl">
-            <div class="row g-2 align-items-center">
-              <div class="col">
-                <!-- Page pre-title -->
-                <div class="page-pretitle">
-                  Overview
-                </div>
-                <h2 class="page-title">
-                  NFT Project overview
-                </h2>
-              </div>
-              <!-- Page title actions -->
-              <div class="col-auto ms-auto d-print-none">
-                <div class="btn-list">
-                  <span class="d-none d-sm-inline">
-                    <a href="#" class="btn">
-                      New view
-                    </a>
-                  </span>
-                  <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
-                    Create new report
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                    </span>
+                    <span class="nav-link-title">
+                      Home
+                    </span>
                   </a>
-                  <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-aperture" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M3.6 15h10.55"></path>
+                        <path d="M6.551 4.938l3.26 10.034"></path>
+                        <path d="M17.032 4.636l-8.535 6.201"></path>
+                        <path d="M20.559 14.51l-8.535 -6.201"></path>
+                        <path d="M12.257 20.916l3.261 -10.034"></path>
+                     </svg>
+                    </span>
+                    <span class="nav-link-title">
+                      Features
+                    </span>
                   </a>
-                </div>
-              </div>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-receipt-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2"></path>
+                        <path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5"></path>
+                     </svg>
+                    </span>
+                    <span class="nav-link-title">
+                      Pricing
+                    </span>
+                  </a>
+                </li>
+
+
+              </ul>
             </div>
           </div>
         </div>
+      </header>
+
         <!-- Page body -->
         <div class="page-body">
           <div class="container-xl">
-            <div class="row row-deck row-cards">
-              <div class="col-sm-6 col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">NFT Mint</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="h1 mb-3">173 NFTs minted</div>
-                    <div class="d-flex mb-2">
-                      <div>Conversion rate</div>
-                      <div class="ms-auto">
-                        <span class="text-green d-inline-flex align-items-center lh-1">
-                          7% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="3 17 9 11 13 15 21 7" /><polyline points="14 7 21 7 21 14" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress progress-sm">
-                      <div class="progress-bar bg-primary" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="75% Complete">
-                        <span class="visually-hidden">75% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">Revenue</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-baseline">
-                      <div class="h1 mb-0 me-2">ETH 183</div>
-                      <div class="me-auto">
-                        <span class="text-green d-inline-flex align-items-center lh-1">
-                          8% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="3 17 9 11 13 15 21 7" /><polyline points="14 7 21 7 21 14" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="chart-revenue-bg" class="chart-sm"></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">New users</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-baseline">
-                      <div class="h1 mb-3 me-2">6,782</div>
-                      <div class="me-auto">
-                        <span class="text-yellow d-inline-flex align-items-center lh-1">
-                          0% <!-- Download SVG icon from http://tabler-icons.io/i/minus -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="5" y1="12" x2="19" y2="12" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                    <div id="chart-new-clients" class="chart-sm"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">Active users</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-baseline">
-                      <div class="h1 mb-3 me-2">12,986</div>
-                      <div class="me-auto">
-                        <span class="text-green d-inline-flex align-items-center lh-1">
-                          4% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="3 17 9 11 13 15 21 7" /><polyline points="14 7 21 7 21 14" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                    <div id="chart-active-users" class="chart-sm"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="row row-cards">
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="card card-sm">
-                      <div class="card-body">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <span class="bg-primary text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" /><path d="M12 3v3m0 12v3" /></svg>
-                            </span>
-                          </div>
-                          <div class="col">
-                            <div class="font-weight-medium">
-                              1032 NFT minted
-                            </div>
-                            <div class="text-muted">
-                              24 today
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-xl-9">
+                <div class="card card-lg">
 
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Activity summary</h3>
-                    <div id="chart-mentions" class="chart-lg"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-header border-0">
-                      <div class="card-title">Last SmartContract Transactions</div>
-                    </div>
-                    <div class="position-relative">
-                      <div class="position-absolute top-0 left-0 px-3 mt-1 w-75">
-                        <div class="row g-2">
-                          <div class="col-auto">
-                            <div class="chart-sparkline chart-sparkline-square" id="sparkline-activity"></div>
-                          </div>
+                    <div class="container-xl d-flex flex-column justify-content-center">
+                      <div class="empty">
+                        <div class="empty-img"><img src="./static/illustrations/undraw_printing_invoices_5r4r.svg" height="128" alt="">
+                        </div>
+                        <p class="empty-title">Internal Dashboard to manage your Blockchain and NFT project</p>
+                        <ul>
+            
+                        </ul>
+                        <div class="empty-action">
+                          <a href="mailto:contact@nodablock.com" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                              <polyline points="3 7 12 13 21 7"></polyline>
+                           </svg>
+                            Contact us
+                          </a>
                         </div>
                       </div>
-                      <div id="chart-development-activity"></div>
                     </div>
-                    <div class="card-table table-responsive">
-                      <table class="table table-vcenter">
-                        <thead>
-                          <tr>
-                            <th>User address</th>
-                            <th>Method</th>
-                            <th>Date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="w-1">
-                              <span class="avatar avatar-sm">0x</span>
-                            </td>
-                            <td class="td-truncate">
-                              <div class="text-truncate">
-                                  Mint
-                              </div>
-                            </td>
-                            <td class="text-nowrap text-muted">21 Dec 2022 06:01</td>
-                          </tr>
-                          <tr>
-                            <td class="w-1">
-                              <span class="avatar avatar-sm">0x</span>
-                            </td>
-                            <td class="td-truncate">
-                              <div class="text-truncate">
-                                  Deposit MAYC
-                              </div>
-                            </td>
-                            <td class="text-nowrap text-muted">21 Dec 2022 06:01</td>
-                          </tr>
-                          <tr>
-                            <td class="w-1">
-                              <span class="avatar avatar-sm" style="background-image: url(./static/avatars/002m.jpg)"></span>
-                            </td>
-                            <td class="td-truncate">
-                              <div class="text-truncate">
-                                  Transfer
-                              </div>
-                            </td>
-                            <td class="text-nowrap text-muted">21 Dec 2022 05:34</td>
-                          </tr>
-                          <tr>
-                            <td class="w-1">
-                              <span class="avatar avatar-sm" style="background-image: url(./static/avatars/003m.jpg)"></span>
-                            </td>
-                            <td class="td-truncate">
-                              <div class="text-truncate">
-                                  Approve
-                              </div>
-                            </td>
-                            <td class="text-nowrap text-muted">21 Dec 2022 05:02</td>
-                          </tr>
-                          <tr>
-                            <td class="w-1">
-                              <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000f.jpg)"></span>
-                            </td>
-                            <td class="td-truncate">
-                              <div class="text-truncate">
-                                  Claim
-                              </div>
-                            </td>
-                            <td class="text-nowrap text-muted">21 Dec 2022 03:39</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="row row-cards">
-                  <div class="col-12">
 
-                  </div>
+                    
                 </div>
-              </div>
-              <div class="col-lg-6">
-
               </div>
             </div>
           </div>
         </div>
+
         <footer class="footer footer-transparent d-print-none">
           <div class="container-xl">
             <div class="row text-center align-items-center flex-row-reverse">
               <div class="col-lg-auto ms-lg-auto">
                 <ul class="list-inline list-inline-dots mb-0">
-                  <li class="list-inline-item"><a href="./docs/" class="link-secondary">Documentation</a></li>
-                  <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
-                  <li class="list-inline-item"><a href="https://github.com/tabler/tabler" target="_blank" class="link-secondary" rel="noopener">Source code</a></li>
-                  <li class="list-inline-item">
-                    <a href="https://github.com/sponsors/codecalm" target="_blank" class="link-secondary" rel="noopener">
-                      <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
-                      Sponsor
-                    </a>
-                  </li>
+                  <li class="list-inline-item"><a href="#" class="link-secondary">Contact</a></li>
+                  <li class="list-inline-item"><a href="#" class="link-secondary">About</a></li>
+                  <li class="list-inline-item"><a href="#" class="link-secondary">Twitter</a></li>
                 </ul>
               </div>
               <div class="col-12 col-lg-auto mt-3 mt-lg-0">
                 <ul class="list-inline list-inline-dots mb-0">
                   <li class="list-inline-item">
                     Copyright &copy; 2022
-                    <a href="." class="link-secondary">Tabler</a>.
+                    <a href="." class="link-secondary">Nodablock</a>.
                     All rights reserved.
                   </li>
-                  <li class="list-inline-item">
-                    <a href="./changelog.html" class="link-secondary" rel="noopener">
-                      v1.0.0-beta16
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -640,572 +243,6 @@
         </div>
       </div>
     </div>
-
-
-<script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-revenue-bg'), {
-      		chart: {
-      			type: "area",
-      			fontFamily: 'inherit',
-      			height: 40.0,
-      			sparkline: {
-      				enabled: true
-      			},
-      			animations: {
-      				enabled: false
-      			},
-      		},
-      		dataLabels: {
-      			enabled: false,
-      		},
-      		fill: {
-      			opacity: .16,
-      			type: 'solid'
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      			curve: "smooth",
-      		},
-      		series: [{
-      			name: "Profits",
-      			data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46, 39, 62, 51, 35, 41, 67]
-      		}],
-      		tooltip: {
-      			theme: 'dark'
-      		},
-      		grid: {
-      			strokeDashArray: 4,
-      		},
-      		xaxis: {
-      			labels: {
-      				padding: 0,
-      			},
-      			tooltip: {
-      				enabled: false
-      			},
-      			axisBorder: {
-      				show: false,
-      			},
-      			type: 'datetime',
-      		},
-      		yaxis: {
-      			labels: {
-      				padding: 4
-      			},
-      		},
-      		labels: [
-      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
-      		],
-      		colors: [tabler.getColor("primary")],
-      		legend: {
-      			show: false,
-      		},
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-clients'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 40.0,
-      			sparkline: {
-      				enabled: true
-      			},
-      			animations: {
-      				enabled: false
-      			},
-      		},
-      		fill: {
-      			opacity: 1,
-      		},
-      		stroke: {
-      			width: [2, 1],
-      			dashArray: [0, 3],
-      			lineCap: "round",
-      			curve: "smooth",
-      		},
-      		series: [{
-      			name: "May",
-      			data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 4, 46, 39, 62, 51, 35, 41, 67]
-      		},{
-      			name: "April",
-      			data: [93, 54, 51, 24, 35, 35, 31, 67, 19, 43, 28, 36, 62, 61, 27, 39, 35, 41, 27, 35, 51, 46, 62, 37, 44, 53, 41, 65, 39, 37]
-      		}],
-      		tooltip: {
-      			theme: 'dark'
-      		},
-      		grid: {
-      			strokeDashArray: 4,
-      		},
-      		xaxis: {
-      			labels: {
-      				padding: 0,
-      			},
-      			tooltip: {
-      				enabled: false
-      			},
-      			type: 'datetime',
-      		},
-      		yaxis: {
-      			labels: {
-      				padding: 4
-      			},
-      		},
-      		labels: [
-      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
-      		],
-      		colors: [tabler.getColor("primary"), tabler.getColor("gray-600")],
-      		legend: {
-      			show: false,
-      		},
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-active-users'), {
-      		chart: {
-      			type: "bar",
-      			fontFamily: 'inherit',
-      			height: 40.0,
-      			sparkline: {
-      				enabled: true
-      			},
-      			animations: {
-      				enabled: false
-      			},
-      		},
-      		plotOptions: {
-      			bar: {
-      				columnWidth: '50%',
-      			}
-      		},
-      		dataLabels: {
-      			enabled: false,
-      		},
-      		fill: {
-      			opacity: 1,
-      		},
-      		series: [{
-      			name: "Profits",
-      			data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46, 39, 62, 51, 35, 41, 67]
-      		}],
-      		tooltip: {
-      			theme: 'dark'
-      		},
-      		grid: {
-      			strokeDashArray: 4,
-      		},
-      		xaxis: {
-      			labels: {
-      				padding: 0,
-      			},
-      			tooltip: {
-      				enabled: false
-      			},
-      			axisBorder: {
-      				show: false,
-      			},
-      			type: 'datetime',
-      		},
-      		yaxis: {
-      			labels: {
-      				padding: 4
-      			},
-      		},
-      		labels: [
-      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
-      		],
-      		colors: [tabler.getColor("primary")],
-      		legend: {
-      			show: false,
-      		},
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-mentions'), {
-      		chart: {
-      			type: "bar",
-      			fontFamily: 'inherit',
-      			height: 240,
-      			parentHeightOffset: 0,
-      			toolbar: {
-      				show: false,
-      			},
-      			animations: {
-      				enabled: false
-      			},
-      			stacked: true,
-      		},
-      		plotOptions: {
-      			bar: {
-      				columnWidth: '50%',
-      			}
-      		},
-      		dataLabels: {
-      			enabled: false,
-      		},
-      		fill: {
-      			opacity: 1,
-      		},
-      		series: [{
-      			name: "Web",
-      			data: [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 2, 12, 5, 8, 22, 6, 8, 6, 4, 1, 8, 24, 29, 51, 40, 47, 23, 26, 50, 26, 41, 22, 46, 47, 81, 46, 6]
-      		},{
-      			name: "Social",
-      			data: [2, 5, 4, 3, 3, 1, 4, 7, 5, 1, 2, 5, 3, 2, 6, 7, 7, 1, 5, 5, 2, 12, 4, 6, 18, 3, 5, 2, 13, 15, 20, 47, 18, 15, 11, 10, 0]
-      		},{
-      			name: "Other",
-      			data: [2, 9, 1, 7, 8, 3, 6, 5, 5, 4, 6, 4, 1, 9, 3, 6, 7, 5, 2, 8, 4, 9, 1, 2, 6, 7, 5, 1, 8, 3, 2, 3, 4, 9, 7, 1, 6]
-      		}],
-      		tooltip: {
-      			theme: 'dark'
-      		},
-      		grid: {
-      			padding: {
-      				top: -20,
-      				right: 0,
-      				left: -4,
-      				bottom: -4
-      			},
-      			strokeDashArray: 4,
-      			xaxis: {
-      				lines: {
-      					show: true
-      				}
-      			},
-      		},
-      		xaxis: {
-      			labels: {
-      				padding: 0,
-      			},
-      			tooltip: {
-      				enabled: false
-      			},
-      			axisBorder: {
-      				show: false,
-      			},
-      			type: 'datetime',
-      		},
-      		yaxis: {
-      			labels: {
-      				padding: 4
-      			},
-      		},
-      		labels: [
-      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19', '2020-07-20', '2020-07-21', '2020-07-22', '2020-07-23', '2020-07-24', '2020-07-25', '2020-07-26'
-      		],
-      		colors: [tabler.getColor("primary"), tabler.getColor("primary", 0.8), tabler.getColor("green", 0.8)],
-      		legend: {
-      			show: false,
-      		},
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-activity'), {
-      		chart: {
-      			type: "radialBar",
-      			fontFamily: 'inherit',
-      			height: 40,
-      			width: 40,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		plotOptions: {
-      			radialBar: {
-      				hollow: {
-      					margin: 0,
-      					size: '75%'
-      				},
-      				track: {
-      					margin: 0
-      				},
-      				dataLabels: {
-      					show: false
-      				}
-      			}
-      		},
-      		colors: [tabler.getColor("blue")],
-      		series: [35],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-development-activity'), {
-      		chart: {
-      			type: "area",
-      			fontFamily: 'inherit',
-      			height: 192,
-      			sparkline: {
-      				enabled: true
-      			},
-      			animations: {
-      				enabled: false
-      			},
-      		},
-      		dataLabels: {
-      			enabled: false,
-      		},
-      		fill: {
-      			opacity: .16,
-      			type: 'solid'
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      			curve: "smooth",
-      		},
-      		series: [{
-      			name: "Purchases",
-      			data: [3, 5, 4, 6, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 8, 4, 14, 30, 17, 19, 15, 14, 25, 32, 40, 55, 60, 48, 52, 70]
-      		}],
-      		tooltip: {
-      			theme: 'dark'
-      		},
-      		grid: {
-      			strokeDashArray: 4,
-      		},
-      		xaxis: {
-      			labels: {
-      				padding: 0,
-      			},
-      			tooltip: {
-      				enabled: false
-      			},
-      			axisBorder: {
-      				show: false,
-      			},
-      			type: 'datetime',
-      		},
-      		yaxis: {
-      			labels: {
-      				padding: 4
-      			},
-      		},
-      		labels: [
-      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
-      		],
-      		colors: [tabler.getColor("primary")],
-      		legend: {
-      			show: false,
-      		},
-      		point: {
-      			show: false
-      		},
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-1'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 24,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      		},
-      		series: [{
-      			color: tabler.getColor("primary"),
-      			data: [17, 24, 20, 10, 5, 1, 4, 18, 13]
-      		}],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-2'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 24,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      		},
-      		series: [{
-      			color: tabler.getColor("primary"),
-      			data: [13, 11, 19, 22, 12, 7, 14, 3, 21]
-      		}],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-3'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 24,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      		},
-      		series: [{
-      			color: tabler.getColor("primary"),
-      			data: [10, 13, 10, 4, 17, 3, 23, 22, 19]
-      		}],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-4'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 24,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      		},
-      		series: [{
-      			color: tabler.getColor("primary"),
-      			data: [6, 15, 13, 13, 5, 7, 17, 20, 19]
-      		}],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-5'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 24,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      		},
-      		series: [{
-      			color: tabler.getColor("primary"),
-      			data: [2, 11, 15, 14, 21, 20, 8, 23, 18, 14]
-      		}],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-    <script>
-      // @formatter:off
-      document.addEventListener("DOMContentLoaded", function () {
-      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-6'), {
-      		chart: {
-      			type: "line",
-      			fontFamily: 'inherit',
-      			height: 24,
-      			animations: {
-      				enabled: false
-      			},
-      			sparkline: {
-      				enabled: true
-      			},
-      		},
-      		tooltip: {
-      			enabled: false,
-      		},
-      		stroke: {
-      			width: 2,
-      			lineCap: "round",
-      		},
-      		series: [{
-      			color: tabler.getColor("primary"),
-      			data: [22, 12, 7, 14, 3, 21, 8, 23, 18, 14]
-      		}],
-      	})).render();
-      });
-      // @formatter:on
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
   </body>
 </html>
